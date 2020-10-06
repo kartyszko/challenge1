@@ -78,7 +78,6 @@ nav ul li a {
 }
 
 /* header */
-
 header {
     margin-top: 3%;
     max-width: 1440px;
@@ -171,6 +170,9 @@ header button {
 section.features {
     margin-top: 15vh;
     text-align: center;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 section.features img {
@@ -201,6 +203,85 @@ section.features p {
         font-size: 1.5em;
     }
 }
+
+/* section.productive */
+section.productive {
+    margin: 10vh 10vw 0;
+}
+
+section.productiv div.container {
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section.productive img {
+    display: block;
+    margin: 0 auto 5vh;
+    width: 80vw;
+    max-width: 500px;
+}
+
+section.productive h1 {
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+section.productive p {
+    margin-bottom: 3vh;
+    font-size: 1.2em;
+    line-height: 1.7em;
+}
+
+section.productive div.text a {
+    text-decoration: none;
+    color: hsl(176, 68%, 64%);
+    font-size: 1.2em;
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+
+
+@media (min-width: 768px) {
+    section.productive {
+        margin: 5vh 0;
+    }
+    section.productive div.img {
+        float: left;
+        width: 60%;
+    }
+    section.productive div.img img {
+        width: 90%;
+    }
+    section.productive div.text {
+        float: left;
+        width: 40%;
+    }
+    section.productive h1 {
+        font-size: 2em;
+        margin: 5vh 10vw 3vh 0;
+        text-align: left;
+    }
+    section.productive p {
+        font-size: 1.3em;
+        margin-right: 5vw;
+}
+
+@media (min-width: 1024px) {
+    
+    section.productive h1 {
+        font-size: 2.5em;
+        margin-right: 20vw;
+    }
+    section.productive p {
+    font-size: 1.5em;
+    margin-right: 10vw;
+    }
+    section.productive div.text a {
+    font-size: 1.5em;
+    }
+}
+
+
 
 
 
