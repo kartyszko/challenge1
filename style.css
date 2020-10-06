@@ -206,7 +206,7 @@ section.features p {
 
 /* section.productive */
 section.productive {
-    margin: 10vh 10vw 0;
+    margin: 10vh 10vw;
 }
 
 section.productiv div.container {
@@ -264,6 +264,7 @@ section.productive div.text a {
     section.productive p {
         font-size: 1.3em;
         margin-right: 5vw;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -281,6 +282,95 @@ section.productive div.text a {
     }
 }
 
+/* section comments */
+section.comments {
+    margin-top: 20vh;
+    position: relative;
+    padding: 0 5vw;
+}
+
+section.comments div.comment {
+    position: relative;
+    background-color:  hsl(219, 30%, 18%);
+    margin-bottom: 5vh;
+    padding: 5vh 5vh;
+}
+
+section.comments img.quotes {
+    position: absolute;
+    z-index: 2;
+    bottom: 101%;
+    height: 5vh;
+}
+
+section.comments div.comment p {
+    margin-bottom: 3vh;
+    line-height: 150%;
+}
+
+section.comments div.comment img {
+    border-radius: 50%;
+    padding: 3%;
+    width: 30%;
+}
+
+section.comments div.comment div.person {
+    position: absolute;
+    top: 55%;
+    left: 40%;
+}
+
+@media (min-width: 411px) {
+    section.comments div.comment p {
+        font-size: 1.2em;
+    }
+    section.comments div.comment div.person h1 {
+        font-size: 1.8em;
+    }
+    section.comments div.comment div.person p {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 768px) {
+    section.comments {
+        padding: 0 15vw;
+    }
+    section.comments div.comment p {
+        font-size: 1.5em;
+    }
+    section.comments div.comment div.person h1 {
+        font-size: 2em;
+    }
+    section.comments div.comment div.person p {
+        font-size: 1.6em;
+    }
+    section.comments div.comment img {
+        width: 35%;
+    }
+    section.comments div.comment div.person {
+        left: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    section.comments div.comment {
+        float: left;
+        width: calc((100% - 90px) / 3);
+        margin: 0 15px;
+        padding: 3vh 3vh;
+    }
+    section.comments {
+        padding: 0 5vw;
+        margin-top: 15vh;
+    }
+    section.comments div.comment img {
+        width: 40%;
+    }
+    section.comments div.comment div.person {
+        top: 63%;
+    }
+}
 
 
 
