@@ -159,7 +159,6 @@ header button {
     margin: 5vw auto 0;
     background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
     padding: 2vh 8vw;
-    text-decoration: none;
     color: hsl(0, 0%, 100%);
     font-size: 1.3em;
     border-radius: 25px;
@@ -371,6 +370,91 @@ section.comments div.comment div.person {
         top: 63%;
     }
 }
+
+/* section contact */
+section.contact {
+    margin: 20vh 10vw 10vh;
+}
+
+section.contact div.contact {
+    padding: 5vw 5vw 10vw;
+    background-color:hsl(217, 28%, 15%);
+    text-align: center;
+}
+section.contact div.contact h1 {
+    padding-bottom: 3vw;
+}
+
+section.contact div.contact p {
+    margin-bottom: 5vh;
+    line-height: 150%;
+}
+
+section.contact div.contact input[type=email] {
+    background-color: hsl(0, 0%, 100%);;
+    padding: 2vh 8vw;
+    margin: 0 auto 3vh;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    font-size: 10px;
+    line-height: 13px;
+    width: 90%;
+    height: 5vh;
+}
+
+section.contact div.contact input[type=email]:focus {
+        outline: none;
+}
+
+section.contact div.contact button {
+    display: inline-block;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3em;
+    border-radius: 25px;
+    border: none;
+    width: 90%;
+    height: 5vh;
+}
+
+@media (min-width: 411px) {
+    section.contact div.contact h1 {
+        font-size: 1.8em;
+    }
+    section.contact div.contact p {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 768px) {
+    section.contact div.contact input[type=email] {
+        float: left;
+        width: 60%;
+    }
+    section.contact div.contact button {
+        float: right;
+        width: 35%;       
+    }
+    section.contact div.contact h1 {
+        font-size: 2.2em;
+    }
+    section.contact div.contact p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    section.contact {
+        margin-right: 20vw;
+        margin-left: 20vw;
+    }
+    section.contact div.contact {
+        padding-bottom: 10vh;
+    }
+}
+
 
 
 
