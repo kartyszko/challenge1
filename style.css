@@ -12,8 +12,12 @@
     clear: both;
 }
 
+button {
+    cursor: pointer;
+}
+
 html {
-    background-color:  hsl(218, 28%, 13%);
+    background-color:  hsl(219, 30%, 18%);
     color: hsl(0, 0%, 100%);
     font-size: 10px;
     font-family: 'Raleway', sans-serif;
@@ -51,6 +55,11 @@ nav ul li a {
     color: hsl(0, 0%, 100%);
     font-size: 1.4rem;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: hsl(176, 68%, 64%);
 }
 
 @media (min-width: 411px) {
@@ -79,10 +88,19 @@ nav ul li a {
 
 /* header */
 header {
+    position: relative;
     margin-top: 3%;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+}
+
+header img.bgimage {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
 }
 
 header div.welcome img {
@@ -107,6 +125,17 @@ header div.welcome p {
     line-height: 140%;
 }
 
+header button {
+    display: block;
+    margin: 5vw auto 0;
+    background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    padding: 2vh 8vw;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3em;
+    border-radius: 25px;
+    border: none;
+}
+
 @media (min-width: 375px) {
     header div.welcome h1 {
         font-size: 2.3em;
@@ -129,7 +158,6 @@ header div.welcome p {
     header div.welcome h1 {
         font-size: 3.5em;
     }
-
 }
 
 @media (min-width: 1024px) {
@@ -154,24 +182,21 @@ header div.welcome p {
     }
 }
 
-header button {
-    display: block;
-    margin: 5vw auto 0;
-    background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
-    padding: 2vh 8vw;
-    color: hsl(0, 0%, 100%);
-    font-size: 1.3em;
-    border-radius: 25px;
-    border: none;
-}
 
 /* section features */
 section.features {
-    margin-top: 15vh;
+    background-color:hsl(218, 28%, 13%);
+    padding: 5% 0;
     text-align: center;
-    max-width: 1024px;
-    margin-right: auto;
-    margin-left: auto;
+}
+
+section.features div.features {
+    margin: 0 10%;
+    padding: 5vw 5vw 10vw;
+}
+
+section.features div.features div.feature {
+    margin-bottom: 10vh;
 }
 
 section.features img {
@@ -205,7 +230,8 @@ section.features p {
 
 /* section.productive */
 section.productive {
-    margin: 10vh 10vw;
+    padding: 10vh 10vw 20vh;
+    background-color: hsl(218, 28%, 13%);
 }
 
 section.productiv div.container {
@@ -241,9 +267,7 @@ section.productive div.text a {
 
 
 @media (min-width: 768px) {
-    section.productive {
-        margin: 5vh 0;
-    }
+    
     section.productive div.img {
         float: left;
         width: 60%;
@@ -267,10 +291,8 @@ section.productive div.text a {
 }
 
 @media (min-width: 1024px) {
-    
     section.productive h1 {
         font-size: 2.5em;
-        margin-right: 20vw;
     }
     section.productive p {
     font-size: 1.5em;
@@ -283,16 +305,21 @@ section.productive div.text a {
 
 /* section comments */
 section.comments {
-    margin-top: 20vh;
     position: relative;
-    padding: 0 5vw;
+    background: hsl(218, 28%, 13%);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 15%;
 }
 
 section.comments div.comment {
     position: relative;
-    background-color:  hsl(219, 30%, 18%);
+    background-color:hsl(219, 30%, 18%);
     margin-bottom: 5vh;
-    padding: 5vh 5vh;
+}
+
+section.comments div.comment:last-child {
+    margin-bottom: 0;
 }
 
 section.comments img.quotes {
@@ -305,6 +332,7 @@ section.comments img.quotes {
 section.comments div.comment p {
     margin-bottom: 3vh;
     line-height: 150%;
+    padding: 3%;
 }
 
 section.comments div.comment img {
@@ -361,7 +389,7 @@ section.comments div.comment div.person {
     }
     section.comments {
         padding: 0 5vw;
-        margin-top: 15vh;
+        /* margin-top: 15vh; */
     }
     section.comments div.comment img {
         width: 40%;
@@ -373,13 +401,14 @@ section.comments div.comment div.person {
 
 /* section contact */
 section.contact {
-    margin: 20vh 10vw 10vh;
+    padding: 5% 0;
+    background-image: linear-gradient(to bottom,hsl(218, 28%, 13%) 50%,hsl(216, 53%, 9%) 50%);
 }
 
 section.contact div.contact {
+    margin: 0 10%;
     padding: 5vw 5vw 10vw;
     background-color:hsl(217, 28%, 15%);
-    text-align: center;
 }
 section.contact div.contact h1 {
     padding-bottom: 3vw;
@@ -445,21 +474,13 @@ section.contact div.contact button {
     }
 }
 
-@media (min-width: 1024px) {
-    section.contact {
-        margin-right: 20vw;
-        margin-left: 20vw;
-    }
-    section.contact div.contact {
-        padding-bottom: 10vh;
-    }
-}
 
 /* section fylo */
 section.fylo {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 5vh;
+    background-color: hsl(216, 53%, 9%);
 }
 
 section.fylo div.icons {
@@ -471,15 +492,7 @@ div.icon {
     margin-bottom: 4vh;
 }
 
-section.fylo div.icon img {
-    padding-right: 3vw;
-    display: block;
-    float: left;
-    width: 8vw;
-}
-
 section.fylo div.icon p {
-    float: left;
     font-size: 1.3em;
 }
 
@@ -507,9 +520,6 @@ div.contactus a {
     section.fylo img.logo {
         width: 200px;
     }
-    section.fylo div.icon img {
-        width: 45px;
-    }
     section.fylo div.icon p {
         font-size: 2em;
     }
@@ -519,7 +529,6 @@ div.contactus a {
     div.contactus a {
         font-size: 2em;
     }
-
     div.icons {
         float: left;
         width: calc(100% / 3);
@@ -534,14 +543,11 @@ div.contactus a {
     }
 }
 
-@media (min-width: 768px) {
-    section.fylo div.icon img {
-        width: 60px;
-}
 
 /* footer */
 footer {
-    margin-bottom: 2vh;
+    padding: 20px 0;
+    background-color: hsl(216, 53%, 9%);
 }
 footer p {
     font-size: 1.2em;
